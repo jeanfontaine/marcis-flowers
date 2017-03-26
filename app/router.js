@@ -7,10 +7,10 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('welcome');
+  this.route('welcome', {path: '/'});
   this.route('about');
-  this.route('404');
   this.route('flowers');
+  this.route('404', {path:'*'});
 });
 
 export default Router;
