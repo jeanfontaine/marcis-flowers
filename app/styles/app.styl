@@ -1,8 +1,109 @@
 
+// $reset
+html
+  box-sizing: border-box
+
+*, *:before, *:after
+  box-sizing: inherit
+
+* // cheap reset
+  margin: 0
+  padding: 0
+
+ul
+  list-style: none
+
+a
+  color: inherit
+  text-decoration: none
+
+// $variables
 $color = #7C0D15
+$pad = .6rem
+
+// $mixins
+responsive-image-wrapper()
+  img
+    display: block
+    width: 100%
+    height: auto
+
+// $structure
+body
+  //
+  > .ember-view // this is admitedly confusing... an unexpected div appears...
+    display: flex
+    flex-direction: column
+    min-height: 100vh
+
+.site-header
+  display: flex
+  flex-direction: row
+  align-items: center
+  flex-grow: 0
+  .branding
+    //
+  .site-navigation
+    //
+  .menu
+    display: flex
+    flex-direction: row
+
+.outlet
+  flex-grow: 1
+
+.site-footer
+flex-grow: 0
+  //
+
+
+// $style
+body
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+  font-size: 16px
+  font-weight: 100
+
+header, main, footer
+  padding: $pad
+
+figure
+  responsive-image-wrapper()
+
+p
+  margin: $pad*1.5 0
+  max-width: 740px
 
 .branding
   font-size: 18px
-  font-weight: bold
+  font-weight: 100
   color: $color
+  border: 1px solid $color
+  padding: 0 $pad
 
+.site-header
+  .menu
+    li
+      margin-left: $pad*3
+
+.outlet
+  padding-bottom: $pad*10
+  h1
+    border-bottom: 1px solid gray
+    font-weight: 100
+    margin-bottom: $pad*2
+  figure
+    max-width: 600px
+
+.flower-list
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: space-between
+  max-width: 800px
+  .flower
+    width: 49%
+    margin-bottom: $pad
+
+.site-footer
+  background: black
+  color: alpha(white, .5)
