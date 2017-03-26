@@ -1,5 +1,31 @@
 
-<header class='site-header'>I'm the Header for Marci's Flowers</header>
+<header class='site-header'>
+
+  <div class='branding'>
+    Marci's flowers
+  </div>
+
+  <nav class='site-navigation'>
+    <ul class='menu'>
+      <li>
+        {{#link-to 'welcome'}}
+          <span>Home</span>
+        {{/link-to}}
+      </li>
+      <li>
+        {{#link-to 'about'}}
+          <span>About</span>
+        {{/link-to}}
+      </li>
+      <li>
+        {{#link-to 'flowers'}}
+          <span>Flowers</span>
+        {{/link-to}}
+      </li>
+    </ul>
+  </nav>
+
+</header>
 
 <div class='outlet'>
   {{outlet}}
