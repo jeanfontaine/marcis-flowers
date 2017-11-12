@@ -1,6 +1,6 @@
 # marcis-flowers
 
-This is an example to go along [with](https://www.codementor.io/sheriffderek/less-than-ambitious-websites-with-ember-js-5mtthoijp) this article:
+This is an example to go along [with this article](https://www.codementor.io/sheriffderek/less-than-ambitious-websites-with-ember-js-5mtthoijp):
 
 
 
